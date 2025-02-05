@@ -1,0 +1,18 @@
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view style="width: 100%;">
+    <view class="user-info-card" background-color="#f0f8ff">
+      <view class="user-info">
+        <image src="{{userInfo.profile.avatar}}" mode="aspectFit" class="user-avatar" />
+        <view class="user-details">
+          <text class="user-name">{{userInfo.profile.name}}，欢迎您！</text>
+          <text class="user-department">部门：{{userInfo.profile.department_name}}</text>
+          <text class="user-permission">权限：{{adminlevel}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <t-grid class="block" column="{{4}}" theme="card" style="background-color: #F0F8FF;">
+    <t-grid-item wx:for="{{menulist}}" wx:key="*this" text="{{item.name}}" icon="{{item.icon}}" style="background-color: #F0F8FF;" data-url="{{item.url}}" bind:tap="onEnterModel" />
+  </t-grid>
+</view>

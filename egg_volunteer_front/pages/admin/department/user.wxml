@@ -1,0 +1,28 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="user-list">
+    <block wx:for="{{ userList }}" wx:key="id">
+      <view class="user-card">
+        <view class="user-info">
+          <text class="user-name">{{ item.name }}</text>
+          <view class="user-actions">
+            <t-button theme="primary" size="small" bind:tap="viewUserDetail" style="margin-right: 10rpx;" bind:tap="todetail" data-id="{{item.user_id}}">查看</t-button>
+          </view>
+        </view>
+        <view class="user-extra-info">
+          <view class="user-department">{{ department }}</view>
+          <!-- 其他信息 -->
+          <view class="other-info">
+            <!-- 其他信息1 -->
+            <view class="info-item">{{ item.extraInfo1 }}</view>
+            <!-- 其他信息2 -->
+            <view class="info-item">{{ item.extraInfo2 }}</view>
+            <!-- 其他信息3 -->
+            <view class="info-item">{{ item.extraInfo3 }}</view>
+            <!-- 可根据需求继续添加 -->
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

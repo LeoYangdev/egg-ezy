@@ -1,0 +1,15 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="top-section">
+    <text class="title">{{ notification.title }}</text>
+    <view class="info">
+      <text class="info-item">发布部门：{{ notification.publisher_department }}</text>
+      <text class="info-item">作者：{{ notification.publisher }}</text>
+      <text class="info-item">发布时间：{{ notification.published_time }}</text>
+      <text class="info-item">更新时间：{{ notification.update_time }}</text>
+    </view>
+  </view>
+  <view class="content-section">
+    <text class="content">{{ notification.content }}</text>
+  </view>
+</view>

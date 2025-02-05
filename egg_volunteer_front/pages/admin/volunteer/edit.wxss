@@ -1,0 +1,17 @@
+/* pages/activity/publish.wxss */
+
+.containers {
+  height: 100%;
+  padding: 20rpx; /* 适当调整内边距 */
+  box-sizing: border-box;
+}
+
+.containers textarea{
+  padding: 10rpx;
+  border: 1px solid #6f6f6f;
+  border-radius: 10rpx;
+}
+.panel-item {
+  border-bottom: 1px solid #F0F0F0;
+}
+

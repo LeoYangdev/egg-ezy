@@ -1,0 +1,37 @@
+<!--pages/notice/index.wxml-->
+<t-toast id="t-toast" />
+<!-- 标题栏 -->
+<view class="block">
+  <t-navbar class="custom-navbar" title="消息中心" t-class-title="nav-title" />
+</view>
+
+<!-- 消息中心 -->
+<t-notice-bar visible="{{true}}" direction="vertical" interval="{{3000}}" content="{{content}}" prefixIcon="sound" bind:click="click"></t-notice-bar>
+
+<!-- 消息中心选择方块 -->
+<view class="choose">
+  <t-grid border="{{border}}" column="{{3}}">
+    <t-grid-item text="系统消息" image="{{img1}}" bind:tap="navigateToSystemMessages" />
+    <t-grid-item text="通知公告" image="{{img2}}" bind:tap="navigateToNotice" />
+    <t-grid-item text="管理员消息" image="{{img3}}" bind:tap="navigateToAdminMessages" />
+  </t-grid>
+</view>
+
+<!-- 最新消息通知 -->
+<view class="news_notice">
+  <view class="notice_t">最新消息通知</view>
+
+  <view class="content" wx:for="{{notificationList}}" wx:for-item="item" wx:key="id">
+    <view class="card" bind:tap="navigateToDetail" data-id="{{item.announcement_id}}">
+      <view class="detail1">
+        <text class="title">{{item.title}}</text>
+        <text class="read">{{item.is_read?"已读":"未读"}}</text>
+      </view>
+      <view class="detail2">
+        <text class="author"> 发布人：{{item.publisher}}</text>
+        <text class="time">发布时间：{{item.published_time}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

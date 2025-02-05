@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "t-input": "tdesign-miniprogram/input/input"
+  },
+  "navigationBarTitleText": "部门管理员列表"
+}

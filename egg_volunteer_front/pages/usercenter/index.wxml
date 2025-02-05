@@ -1,0 +1,25 @@
+<!--pages/usercenter/index.wxml-->
+<view class="user-center-card">
+  <block>
+    <view class="user-center-card__header">
+      <t-avatar
+        t-class="avatar"
+        mode="aspectFill"
+        class="user-center-card__header__avatar"
+        image="{{userInfo.profile.avatar || defaultAvatarUrl}}"
+      />
+      <view class="user-center-card__header__name">{{userInfo.profile.name || '微信用户'}}</view>
+    </view>
+  </block>
+</view>
+<view class="content-wrapper">
+  <view class="order-group-wrapper">
+    <t-cell-group theme="card">
+      <block wx:for="{{cells}}" wx:key="item">
+        <t-cell title="{{item.name}}" leftIcon="{{item.icon}}" data-id="{{item.id}}" data-url="{{item.url}}" hover arrow bind:tap="navigateToDetail"/>
+      </block>
+      <t-cell title="管理后台" leftIcon="application" data-id="7" data-url="../admin/index" style="display: {{isadmin?'flex':'none'}};" hover arrow bind:tap="navigateToDetail"/>
+    </t-cell-group>
+  </view>
+</view>
+<view class="footer__version">当前版本: v0.0.1 </view>

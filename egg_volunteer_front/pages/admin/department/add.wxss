@@ -1,0 +1,6 @@
+.containers {
+  height: 100%;
+  padding: 20rpx; /* 适当调整内边距 */
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="top-section">
+    <text class="title">消息详情</text>
+    <view class="info">
+      <text class="info-item">类别：{{ message.message_type==1?"消息":"消息" }}</text>
+      <text class="info-item">发送人：{{ message.sender_name }}</text>
+      <!-- <text class="info-item">是否已读：{{ message.is_read==1 ? '已读' : '未读' }}</text> -->
+      <text class="info-item">发送时间：{{ message.sent_time }}</text>
+    </view>
+  </view>
+  <view class="content-section">
+    <text class="content">{{ message.content }}</text>
+  </view>
+</view>

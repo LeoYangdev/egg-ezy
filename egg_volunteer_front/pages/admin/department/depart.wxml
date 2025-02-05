@@ -1,0 +1,32 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="card-list">
+    <block wx:for="{{departments}}" wx:key="id">
+      <view class="card" bindtap="goToDepartmentDetail">
+        <text>{{item.department_name}}</text>
+        <view class="card-actions">
+          <t-button theme="primary" size="small" bindtap="checkDepartment" data-id="{{item.department_id}}" data-name="{{item.department_name}}">查看</t-button>
+          <t-button theme="primary" size="small" bindtap="editDepartment" data-id="{{item.department_id}}" data-name="{{item.department_name}}">修改</t-button>
+          <t-button theme="danger" size="small" bindtap="deleteDepartment" data-id="{{item.department_id}}" data-name="{{item.department_name}}">删除</t-button>
+        </view>
+      </view>
+
+    </block>
+  </view>
+  <view class="add-department">
+    <t-button theme="primary" size="large" block bindtap="addDepartment">新增部门</t-button>
+  </view>
+  <!-- 模态框 -->
+  <view class="modal-mask" wx:if="{{showModal}}">
+    <view class="modal">
+      <view class="modal-header">修改{{readySent.name}}部门名称</view>
+      <view class="modal-content">
+        <textarea class="modal-textarea" placeholder="请输入新的部门名称" bindinput="inputRemark" value="{{readySent.name}}"></textarea>
+      </view>
+      <view class="modal-footer">
+        <button class="btn-confirm" bindtap="confirmRemark">确认</button>
+        <button class="btn-cancel" bindtap="hideModal">取消</button>
+      </view>
+    </view>
+  </view>
+</view>

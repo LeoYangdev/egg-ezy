@@ -1,0 +1,106 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "e%E5%BF%97%E6%84%BF%E4%B8%8E%E5%8B%A4%E5%B7%A5%E4%BF%AD%E5%AD%A6%E7%B3%BB%E7%BB%9F",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "libVersion": "3.3.5",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "审核",
+          "pathName": "pages/admin/volunteer/approval",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "系统消息",
+          "pathName": "pages/notice/sysinfo/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "我的活动",
+          "pathName": "pages/usercenter/active/active",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/usercenter/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人资料",
+          "pathName": "pages/usercenter/userinfo/userindex",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "反馈管理",
+          "pathName": "pages/admin/feedback/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "后台首页",
+          "pathName": "pages/admin/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/access/manage",
+          "pathName": "pages/admin/access/manage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/convert/convert",
+          "pathName": "pages/admin/convert/convert",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/admin/volunteer/index",
+          "pathName": "pages/admin/volunteer/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "报名名单",
+          "pathName": "pages/admin/volunteer/signlist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/usercenter/userfeedback/userfeedback",
+          "pathName": "pages/usercenter/userfeedback/userfeedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/usercenter/scancode/scancode",
+          "pathName": "pages/usercenter/scancode/scancode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

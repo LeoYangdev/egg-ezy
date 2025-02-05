@@ -1,0 +1,50 @@
+<view class="container">
+  <image class="cover-image" src="{{activity_pic}}" mode="aspectFit"></image>
+  <view class="content">
+    <view class="titleview">
+    <text class="title">{{activityName}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">活动开始时间：{{startTime}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">活动结束时间：{{endTime}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">报名截止时间：{{deadline}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">活动地点：{{activityPlace}}</text>
+    </view>
+    <view class="description">
+      <text class="info-item">活动内容：{{detailInfo}}</text>
+    </view>
+    <view class="requirements">
+      <text class="info-item">报名要求：{{requirement}}</text>
+    </view>
+    <view class="requirements">
+      <text class="info-item">活动人数：{{access_person}}/{{needperson}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">已报名人数：{{sign_person}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">服务保障：{{guarantee}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">联系人：{{contactName}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">联系方式：{{contactPhone}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">报名限制：{{defaultVal==true?"仅限"+organizer_department+"成员报名":"无"}}</text>
+    </view>
+    <view class="info">
+      <text class="info-item">发布者：{{organizer}} - {{organizer_department}}</text>
+    </view>
+  </view>
+  <view class="footer">
+    <t-button theme="primary" size="large" block bindtap="handleSignUp" disabled="{{!canSign}}">{{canSign?"立即报名":signMsg}}</t-button>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+
+<t-toast id="t-toast" />
+<view class="container">
+  <view wx:for="{{ articles }}" wx:key="article_id" style="width: 100%;">
+    <view class="card" bindtap="goToDetail" data-article-id="{{ item.article_id }}">
+      <view class="card-header">
+        <text class="title">{{ item.title }}</text>
+        <text class="category">类别：{{ item.category==0?"志愿活动":"勤工俭学" }}</text>
+      </view>
+      <view class="card-header">
+        <text class="author">作者：{{ item.organizer }}</text>
+      </view>
+      <view class="card-content">
+        <text class="content">{{ item.content }}</text>
+      </view>
+      <view class="card-footer">
+        <text class="published-time">发布时间：{{ item.published_time }}</text>
+      </view>
+    </view>
+  </view>
+</view>

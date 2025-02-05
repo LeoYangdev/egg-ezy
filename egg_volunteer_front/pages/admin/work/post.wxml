@@ -1,0 +1,18 @@
+<t-toast id="t-toast" />
+<view class="containers">
+  <t-cell title="工作封面图" description='点击上传工作封面图' hover arrow bordered="{{true}}" image="{{work_pic}}" bind:tap="uploadimage" data-key="imageurl"></t-cell>
+  <t-input label="工作名称" placeholder="请输入工作名称" value="{{ workName }}" bind:change="onInputChange" data-key="workName" />
+  <t-input label="工作地点" placeholder="请输入工作地点" value="{{ workPlace }}" bind:change="onInputChange" data-key="workPlace" />
+  <t-input label="招募人数" placeholder="请输入招募人数" value="{{ needperson }}" bind:change="onInputChange" data-key="needperson" />
+  <t-cell title="开始时间" hover note="{{startTimeText}}" arrow data-mode="startTime" bindtap="showPicker" t-class="panel-item" data-key="startTimeText" />
+  <t-cell title="结束时间" hover note="{{endTimeText}}" arrow data-mode="endTime" bindtap="showPicker" t-class="panel-item" data-key="endTimeText" />
+  <t-cell title="截止时间" hover note="{{deadlineText}}" arrow data-mode="deadline" bindtap="showPicker" t-class="panel-item" data-key="deadlineText" />
+
+  <!-- 年月日时分秒 -->
+  <t-date-time-picker title="选择日期和时间" visible="{{pickerVisible}}" mode="second" value="{{pickerValue}}" format="YYYY-MM-DD HH:mm:ss" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" />
+
+  <t-input label="联系人" placeholder="请输入联系人姓名" value="{{ contactName }}" bind:change="onInputChange" data-key="contactName" />
+  <t-input label="联系电话" placeholder="请输入联系人电话" value="{{ contactPhone }}" bind:change="onInputChange" data-key="contactPhone" />
+  <t-textarea label="工作描述" placeholder="请输入工作描述" value="{{ detailInfo }}" bind:change="onInputChange" data-key="detailInfo" />
+  <t-button theme="primary" size="large" bind:tap="onSubmit" block>发布工作</t-button>
+</view>

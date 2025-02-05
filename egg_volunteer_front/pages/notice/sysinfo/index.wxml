@@ -1,0 +1,16 @@
+<!-- pages/user/messages/list.wxml -->
+<t-toast id="t-toast" />
+<view class="container">
+  <view wx:for="{{ messages }}" wx:key="approval_id" style="width: 100%;">
+    <view class="message-card">
+      <view class="message-info">
+        <text class="activity-name">{{ item.activity_type==1?item.activity_name:item.job_name}}</text>
+        <text class="status {{ item.statusClass }}">{{ item.statusText }}</text>
+      </view>
+      <view class="message-details">
+        <text class="remarks">{{ item.remarks }}</text>
+        <text class="time">{{ item.approval_time }}</text>
+      </view>
+    </view>
+  </view>
+</view>

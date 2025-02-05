@@ -1,0 +1,21 @@
+<!-- pages/notification/list.wxml -->
+<t-toast id="t-toast" />
+<view class="container">
+  <view wx:for="{{ notificationList }}" wx:key="article_id" style="width: 100%;">
+    <view class="card" bindtap="goToDetail" data-id="{{ item.announcement_id }}">
+      <view class="card-header">
+        <text class="title">{{ item.title }}</text>
+        <text class="category">{{ item.is_read?"已读":"未读" }}</text> 
+      </view>
+      <view class="card-header">
+        <text class="author">作者：{{ item.publisher }}</text>
+      </view>
+      <view class="card-content">
+        <text class="content">{{ item.content }}</text>
+      </view>
+      <view class="card-footer">
+        <text class="published-time">发布时间：{{ item.published_time }}</text>
+      </view>
+    </view>
+  </view>
+</view>

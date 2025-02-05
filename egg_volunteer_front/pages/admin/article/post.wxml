@@ -1,0 +1,11 @@
+<t-toast id="t-toast" />
+<view class="containers">
+  <view class="input-example__label"> 类型 </view>
+  <t-radio-group default-value="0" borderless t-class="box" bind:change='OnRadioChange'>
+      <t-radio block="{{false}}" label="志愿活动" icon="dot" value="0" />
+      <t-radio block="{{false}}" label="勤工俭学" icon="dot" value="1" />
+    </t-radio-group>
+  <t-input label="文章标题" placeholder="请输入文章标题" value="{{ title }}" bind:change="onInputChange" data-key="title" />
+  <t-textarea label="文章内容" placeholder="请输入文章内容" value="{{ content }}" bind:change="onInputChange" data-key="content" />
+  <t-button theme="primary" size="large" bind:tap="publishArticle" block>发布文章</t-button>
+</view>

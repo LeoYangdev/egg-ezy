@@ -1,0 +1,46 @@
+.container {
+  padding: 20rpx;
+}
+
+.log-list {
+  margin-top: 20rpx;
+}
+
+.log-card {
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+
+.log-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.log-time,
+.log-user,
+.log-affected {
+  font-size: 24rpx;
+  color: #666;
+}
+
+t-tabs {
+  width: 100%;
+}
+
+.t-search__input-container {
+  border-radius: 32rpx !important;
+  height: 64rpx !important;
+}
+
+.t-search__input {
+  font-size: 28rpx !important;
+  color: rgb(116, 116, 116) !important;
+}

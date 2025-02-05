@@ -1,0 +1,124 @@
+.container {
+  padding: 20rpx;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.user-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions t-button {
+  margin-right: 10rpx;
+}
+
+.user-extra-info {
+  padding: 0 20rpx 20rpx;
+}
+
+.user-department {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.other-info {
+  margin-top: 10rpx;
+}
+
+.info-item {
+  font-size: 28rpx;
+  color: #999;
+}
+
+t-search {
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+
+/* 模态框样式 */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+
+.modal-header {
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+}
+
+.modal-content {
+  margin-top: 20rpx;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 200rpx;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+}
+
+.modal-footer {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-confirm,
+.btn-cancel {
+  width: 45%;
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: none;
+  border-radius: 8rpx;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-confirm {
+  background-color: #4caf50;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+}

@@ -1,0 +1,97 @@
+page{
+  background-color: #f1f1f1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  margin: 0 32rpx;
+}
+
+.input-example {
+  --td-input-vertical-padding: 24rpx;
+  background-color: var(--bg-color-demo);
+}
+
+.input-example__label {
+  color: var(--td-text-color-primary);
+  font-size: 24rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+
+.custom-textarea {
+  margin: 20rpx 0rpx; /* 设置内边距 */
+}
+.textarea-example {
+  padding: 32rpx 32rpx 48rpx;
+  background-color: var(--bg-demo-color);
+}
+
+.external-class {
+  padding-top: 24rpx !important;
+  padding-bottom: 24rpx !important;
+}
+
+
+.content {
+  width: 100%;
+}
+.radio-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.bottom-card {
+  position: relative;
+  margin-top: 20rpx;
+  width: 90%;
+  background-color: #f5f5f5;
+  padding: 32rpx;
+  border: 1px solid #d6cfcf;
+  white-space: nowrap;
+}
+
+.feedback-details {
+  display: flex; 
+  justify-content: space-between;
+}
+
+
+.title,
+.content,
+.time,
+.status {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.feedback_content {
+  max-width: 250rpx;
+  overflow: hidden;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.time {
+  color: #888;
+}
+
+.status {
+  color: orange;
+}
+.status-ok {
+  color: #007aff !important;
+}
+
+.box {
+  padding: 32rpx;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--td-bg-color-container, #fff);
+  border-radius: 12rpx;
+}

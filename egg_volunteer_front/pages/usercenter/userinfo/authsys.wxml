@@ -1,0 +1,26 @@
+<!-- authentication.wxml -->
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="logo-container">
+    <image src="../../../image/dgut.png" mode='aspectFit' class="logo" />
+    <view class="logo-text">中央认证系统认证</view>
+  </view>
+  <form>
+    <t-input
+      name="username"
+      type="text"
+      placeholder="请输入账号"
+      bind:change="inputUsername"
+    />
+    <t-input
+      name="password"
+      type="password"
+      placeholder="请输入密码"
+      bind:change="inputPassword"
+    />
+    <t-button theme="primary" size="large" class="auth-button" bind:tap="authenticate">认证</t-button>
+  </form>
+  <view wx:if="{{isAuthenticated}}" class="success-message">
+    认证成功！
+  </view>
+</view>

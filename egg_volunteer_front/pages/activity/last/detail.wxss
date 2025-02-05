@@ -1,0 +1,66 @@
+/* pages/notification/detail.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  justify-content: flex-start; /* 将内容从顶部开始排列 */
+  align-items: flex-start; /* 使内容左对齐 */
+}
+
+.top-section {
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+}
+
+.info {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx; /* 增加间距 */
+  text-align: left;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30rpx;
+}
+
+.like-icon {
+  font-size: 70rpx;
+  color: #FF6666;
+  line-height: 60rpx;
+}
+
+.like-count {
+  font-size: 32rpx;
+  color: #666;
+  margin-left: 5rpx; /* 图标和数字之间的间距 */
+}
+
+.content-section {
+  flex: 1;
+}
+
+.content {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  text-align: left;
+}

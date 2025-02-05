@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.article-list {
+  width: 100%;
+  padding-bottom: 50rpx;
+}
+
+.article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.article-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.article-actions {
+  display: flex;
+  gap: 8rpx;
+}
+
+.publish-btn-container {
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.publish-btn-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.publish-btn-container button{
+  border-radius: initial;
+}

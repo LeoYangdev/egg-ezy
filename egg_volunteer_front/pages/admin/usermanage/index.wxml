@@ -1,0 +1,44 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <t-search placeholder="搜索用户" bind:change="searchUser" style="width: calc(100% - 40rpx); margin: 0 20rpx 20rpx;" />
+  <view class="user-list">
+    <block wx:for="{{ userList }}" wx:key="id">
+      <view class="user-card">
+        <view class="user-info">
+          <text class="user-name">{{ item.profile.name }}</text>
+          <view class="user-actions">
+            <t-button theme="primary" size="small" bind:tap="viewUserDetail" style="margin-right: 10rpx;" data-id="{{item.user_id}}">查看</t-button>
+            <t-button theme="{{ item.status==1 ? 'danger' : 'success' }}" size="small" bind:tap="toggleUserStatus" style="margin-right: 10rpx;" data-id="{{item.user_id}}" data-name="{{item.profile.name}}">{{ item.status==1 ? '禁用' : '启用' }}</t-button>
+            <t-button theme="primary" size="small" bind:tap="sendMessage" data-id="{{item.user_id}}" data-name="{{item.profile.name}}">发送消息</t-button>
+          </view>
+        </view>
+        <view class="user-extra-info">
+          <view class="user-department">{{ item.profile.department.department_name }}</view>
+          <!-- 其他信息 -->
+          <view class="other-info">
+            <!-- 其他信息1 -->
+            <view class="info-item">{{ item.extraInfo1 }}</view>
+            <!-- 其他信息2 -->
+            <view class="info-item">{{ item.extraInfo2 }}</view>
+            <!-- 其他信息3 -->
+            <view class="info-item">{{ item.extraInfo3 }}</view>
+            <!-- 可根据需求继续添加 -->
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- 模态框 -->
+<view class="modal-mask" wx:if="{{showModal}}">
+  <view class="modal">
+    <view class="modal-header">给用户{{readySent.name}}发送消息</view>
+    <view class="modal-content">
+      <textarea class="modal-textarea" placeholder="请输入消息" bindinput="inputRemark"></textarea>
+    </view>
+    <view class="modal-footer">
+      <button class="btn-confirm" bindtap="confirmRemark">确认</button>
+      <button class="btn-cancel" bindtap="hideModal">取消</button>
+    </view>
+  </view>
+</view>

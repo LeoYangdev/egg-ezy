@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="header">
+    <text class="title">{{info.job_name}}</text>
+    <text class="time">{{info.start_time}} —— {{info.end_time}}</text>
+  </view>
+  <view class="approval-list">
+    <view wx:if="{{info.sign_person==0}}">暂无名单</view>
+    <view wx:for="{{signlist}}" wx:key="approval_id" class="item">
+      <view class="info">
+        <text class="name">{{item.profile.name}}</text>
+        <text class="time">{{item.sign_time}}</text>
+      </view>
+      <text class="contact">{{item.profile.phone}}</text>
+      <view class="buttons" wx:if="{{item.register_status==0}}">
+        <t-button theme="primary" size="small" bindtap="approveApplicant" data-id="{{item.user_id}}" data-rid="{{item.rid}}" data-index="{{index}}" data-name="{{item.profile.name}}">通过</t-button>
+        <t-button theme="danger" size="small" bindtap="rejectApplicant" data-id="{{item.user_id}}" data-rid="{{item.rid}}" data-index="{{index}}">拒绝</t-button>
+      </view>
+      <view class="buttons" wx:if="{{item.register_status==1}}">
+        <t-button theme="default" size="small" disabled style="color: green;">{{item.register_status==1?'审核通过':'审核拒绝'}}</t-button>
+      </view>
+      <view class="buttons" wx:if="{{item.register_status==2}}">
+        <t-button theme="danger" size="small" bind:tap="approveApplicant" data-id="{{item.user_id}}" data-rid="{{item.rid}}" data-index="{{index}}" data-name="{{item.profile.name}}">重新审核</t-button>
+      </view>
+    </view>
+  </view>
+  <!-- 模态框 -->
+  <view class="modal-mask" wx:if="{{showModal}}">
+    <view class="modal">
+      <view class="modal-header">请输入备注信息</view>
+      <view class="modal-content">
+        <textarea class="modal-textarea" placeholder="请输入备注信息" bindinput="inputRemark"></textarea>
+      </view>
+      <view class="modal-footer">
+        <button class="btn-confirm" bindtap="confirmRemark">确认</button>
+        <button class="btn-cancel" bindtap="hideModal">取消</button>
+      </view>
+    </view>
+  </view>
+</view>

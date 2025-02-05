@@ -1,0 +1,23 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <!-- 用户反馈详情 -->
+  <view class="feedback-detail">
+    <view class="feedback-title">{{feedback.feedback_title}}</view>
+    <view class="feedback-info">
+      <text class="feedback-type {{feedback.feedback_type==0?'feedback':'suggestion'}}">{{feedback.feedback_type==0?'反馈':'建议'}}</text>
+      <text class="feedback-status {{feedback.status==0?'pending':'completed'}}">{{feedback.status==0?'待处理':'已完成'}}</text>
+      <text class="feedback-time">{{feedback.feedback_time}}</text>
+    </view>
+    <view class="feedback-content">{{feedback.feedback_content}}</view>
+  </view>
+
+  <!-- 回复输入框 -->
+  <view class="reply-input">
+    <t-textarea t-class="external-class" placeholder="请输入回复内容" bordered maxlength="100" disableDefaultPadding="{{true}}" indicator value="{{feedback.remarks}}" bind:change="onInputChange"/>
+  </view>
+
+  <!-- 确认按钮 -->
+  <view class="confirm-button">
+    <t-button theme="primary" size="large" block bindtap="confirmHandle">确认处理</t-button>
+  </view>
+</view>

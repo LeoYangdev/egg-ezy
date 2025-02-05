@@ -1,0 +1,107 @@
+page{
+  background-color: #f1f1f1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.feedback-detail {
+  width: 100%;
+  max-width: 600rpx; /* 最大宽度 */
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.feedback-title {
+  font-size: 36rpx; /* 标题字体稍大一点 */
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.feedback-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+  align-items: center; /* 垂直居中 */
+}
+
+.feedback-type,
+.feedback-status {
+  border: 1rpx solid #ccc; /* 添加外边框 */
+  border-radius: 12rpx; /* 添加圆角 */
+  padding: 4rpx 8rpx; /* 添加内边距 */
+}
+
+.feedback-type,
+.feedback-status,
+.feedback-time,
+.feedback-content {
+  font-size: 32rpx; /* 字体大小为32rpx */
+  color: #333;
+}
+
+.feedback-content {
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+  padding: 12rpx;
+  margin-bottom: 16rpx;
+  /* 设置自动换行 */
+  white-space: pre-wrap;
+}
+
+.reply-input {
+  width: 100%;
+  max-width: 600rpx; /* 最大宽度 */
+  margin-bottom: 20rpx;
+}
+
+.reply-input t-textarea {
+  width: 100%;
+}
+
+.confirm-button {
+  width: 100%;
+  max-width: 600rpx; /* 最大宽度 */
+}
+
+/* 反馈类型样式 */
+.feedback-type.feedback {
+  background-color: #6699cc; /* 深蓝色 */
+  color: #fff; /* 白色 */
+}
+
+.feedback-type.suggestion {
+  background-color: #ff9966; /* 橙色 */
+  color: #fff; /* 白色 */
+}
+
+/* 状态样式 */
+.feedback-status.pending {
+  background-color: #ff9900; /* 橙色 */
+  color: #fff; /* 白色 */
+}
+
+.feedback-status.completed {
+  background-color: #009933; /* 深绿色 */
+  color: #fff; /* 白色 */
+}
+
+.feedback-reply {
+  margin-top: 20rpx; /* 上边距 */
+}
+
+.reply-label {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.reply-content {
+  font-size: 32rpx;
+  margin-top: 10rpx; /* 上边距 */
+}
+

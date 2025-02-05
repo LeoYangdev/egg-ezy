@@ -1,0 +1,62 @@
+page{
+  background-color: #f1f1f1;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-example {
+  margin: 0 32rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.list {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.name,
+.contact,
+.time {
+  font-size: 28rpx;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-signup {
+  margin: 10rpx;
+}
+.btn-signdown {
+  margin: 10rpx;
+}

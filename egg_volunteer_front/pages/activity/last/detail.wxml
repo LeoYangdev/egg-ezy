@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="top-section">
+    <text class="title">{{ title }}</text>
+    <view class="info">
+      <text class="info-item">类别：{{ category==0?"志愿活动":"勤工俭学" }}</text>
+      <text class="info-item">作者：{{ organizer }}</text>
+      <text class="info-item">部门：{{ organizer_department }}</text>
+      <text class="info-item">发布时间：{{ published_time }}</text>
+      <text class="info-item">更新时间：{{ update_time }}</text>
+      <!-- 新增点赞按钮 -->
+      <button class="like-button" bindtap="toggleLike">
+        <text class="like-icon">{{ liked==1 ? '♥' : '♡' }}</text>
+        <text class="like-count">{{ likeCount }}</text>
+      </button>
+    </view>
+  </view>
+  <view class="content-section">
+    <text class="content">{{ content }}</text>
+  </view>
+</view>

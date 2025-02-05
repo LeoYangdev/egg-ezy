@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="title">报名人员名单</view>
+  <view class="list">
+    <view class="item">
+        <text class="name">姓名</text>
+        <text class="name">联系方式</text>
+        <text class="contact" style="visibility: hidden;">操作</text>
+        <text class="contact">操作</text>
+      </view>
+      <block wx:for="{{userlist}}" wx:key="index">
+      <view class="item">
+        <text class="name">{{item.profile.name}}</text>
+        <text class="contact">{{item.profile.phone}}</text>
+        <view class="buttons">
+          <t-button size="small" theme="danger" bindtap="onDetactApproval" class="btn-signup" data-id="{{item.user_id}}" data-rid="{{item.rid}}" data-index="{{index}}" data-name="{{item.profile.name}}" disabled="{{item.register_status==2}}">撤销审核</t-button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+

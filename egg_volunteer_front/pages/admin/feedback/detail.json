@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "t-textarea": "tdesign-miniprogram/textarea/textarea"
+  },
+  "navigationBarTitleText": "处理反馈"
+}

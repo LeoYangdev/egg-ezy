@@ -1,0 +1,13 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="input-wrapper">
+    <t-input label="转换比例" placeholder="请输入学分转换比例" tips="请设置1学分等于多少时长" bind:change="OnInputChange"></t-input>
+  </view>
+  <t-button theme="primary" class="generate-btn" bindtap="generateDownloadLink">生成下载链接</t-button>
+  <view class="download-link" wx:if="{{downloadLink}}">
+    <textarea style="border: grey solid 1px; height: 100rpx;">{{downloadLink}}</textarea>
+  </view>
+  <view class="download-link" wx:if="{{downloadLink}}">
+    <t-button theme="light" bindtap="copyDownloadLink">复制下载链接</t-button>
+  </view>
+</view>

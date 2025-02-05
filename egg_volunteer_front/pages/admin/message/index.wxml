@@ -1,0 +1,32 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <!-- <t-search placeholder="搜索通知公告" bind:change="searchNotification" style="margin-bottom: 20rpx; width: calc(100% - 40rpx); margin: 0 20rpx 20rpx;" /> -->
+  <view class="notification-list">
+    <block wx:for="{{ notificationList }}" wx:key="id">
+      <view class="notification-card">
+        <view class="notification-info">
+          <view class="notification-title">{{ item.title }}</view>
+          <view class="notification-actions">
+            <t-button theme="primary" size="small" bind:tap="editNotification" style="margin-right: 10rpx;" data-id="{{ item.announcement_id }}">编辑</t-button>
+            <t-button theme="danger" size="small" bind:tap="deleteNotification" style="margin-right: 10rpx;" data-id="{{ item.announcement_id }}" data-name="{{ item.title }}">删除</t-button>
+          </view>
+        </view>
+        <view class="notification-details">
+          <view class="notification-preview">{{ item.content }}</view>
+          <view class="other-info">
+            <!-- 其他信息1 -->
+            <view class="info-item">{{ item.published_time }}</view>
+            <!-- 其他信息2 -->
+            <view class="info-item">{{ item.extraInfo2 }}</view>
+            <!-- 其他信息3 -->
+            <view class="info-item">{{ item.extraInfo3 }}</view>
+            <!-- 可根据需求继续添加 -->
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="publish-button">
+    <t-button theme="primary" size="large" bind:tap="publishNotification" block>发布通知</t-button>
+  </view>
+</view>

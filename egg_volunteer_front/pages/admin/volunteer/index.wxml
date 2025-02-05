@@ -1,0 +1,74 @@
+<!--pages/activity/index.wxml-->
+<t-toast id="t-toast" />
+
+<view style="background-color: white;">
+  <!-- 刷新加载 -->
+  <view style="text-align: center; color: black" wx:if="{{pageLoading}}">
+    <t-loading theme="circular" size="40rpx" text="加载中..." style="padding: 10rpx;" />
+  </view>
+
+  <!-- 搜索框头部 -->
+  <t-sticky>
+    <view class="home-page-header">
+      <view class="search">
+        <t-search class="search" t-class-input="t-search__input" t-class-input-container="t-search__input-container" bind:change="search" placeholder="搜索你想要的{{currenTab == 0? '活动':'工作'}}" leftIcon="">
+          <t-icon class="icon-class" slot="left-icon" prefix="wr" name="search" size="40rpx" color="#bbb" />
+        </t-search>
+      </view>
+    </view>
+  </t-sticky>
+  <view class="card-container">
+    <!-- 实现卡片代码 -->
+    <view class="card" wx:for="{{activities}}" wx:key="id" wx:for-item="act">
+      <image src="{{act.image}}" mode="" />
+      <!-- 左侧信息 -->
+      <view class="card-info">
+        <view class="activity-title">
+          <text>{{act.title}}</text>
+        </view>
+        <view class="active-detail">
+          <view class="active-time">
+            <t-icon class="icon-class" size="30rpx" name="time"></t-icon>
+            <view class="info-text"><text>时间: {{act.time}}</text></view>
+          </view>
+          <view class="activity-position">
+            <t-icon class="icon-class" size="30rpx" name="location"></t-icon>
+            <view class="info-text"><text>地点: {{act.location}}</text></view>
+          </view>
+          <view class="activity-person">
+            <t-icon class="icon-class" size="30rpx" name="user"></t-icon>
+            <view class="info-text"><text>报名人数: {{act.signperson}}/{{act.needperson}}</text></view>
+          </view>
+          <view class="activity-waitperson">
+            <t-icon class="icon-class" size="30rpx" name="user-time"></t-icon>
+            <view class="info-text"><text>待审核: {{act.signperson-act.accessperson}}</text></view>
+          </view>
+          <view class="activity-status">
+            <t-icon class="icon-class" size="30rpx" name="info-circle"></t-icon>
+            <view class="info-text"><text>状态: {{act.status}}</text></view>
+          </view>
+        </view>
+      </view>
+      <!-- 右侧状态栏及操作 -->
+      <view class="card-right-box">
+        <view class="action-buttons">
+          <t-button theme="primary" ghost size="extra-small" bind:tap="onViewEnrollment" data-id="{{act.id}}">查看名单</t-button>
+          <t-button theme="primary" ghost size="extra-small" bind:tap="onEditActivity" data-id="{{act.id}}">修改活动</t-button>
+          <t-button theme="danger" ghost size="extra-small" bind:tap="onDeleteActivity" data-id="{{act.id}}" data-name="{{act.title}}">删除活动</t-button>
+          <t-button theme="primary" ghost size="extra-small" bind:tap="onApprovalActivity" data-id="{{act.id}}">报名审核</t-button>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+  <!-- 页面底部发布新活动通栏按钮 -->
+  <view class="publish-new-activity" style="width:100%;background-color: #f8f8f8; position: fixed; bottom: 0; z-index: 999;">
+    <t-button theme="primary" bind:click="onPublishActivity" size="large" block t-class="external-class" bind:tap="postactivity">发布新活动</t-button>
+  </view>
+  <view class="pull-up-loader">
+    <t-loading theme="circular" size="40rpx" text="加载中..." class="wrapper" style="display: {{isLoading?'':'none'}};" />
+    <text class="foot-tip">{{ isLoading || pageLoading ? "" : (currenPage != currenTotal ? "上拉加载更多..." : "无更多数据") }}
+    </text>
+  </view>
+</view>

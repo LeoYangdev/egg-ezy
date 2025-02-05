@@ -1,0 +1,16 @@
+<!-- pages/admin/messages/list.wxml -->
+<t-toast id="t-toast" />
+<view class="container">
+  <view wx:for="{{ messages }}" wx:key="message_id" style="width: 100%;">
+    <view class="message-card" bindtap="goToDetail" data-id="{{ item.message_id }}">
+      <view class="message-info">
+        <text class="content">{{ item.content }}</text>
+        <text class="sender">发送人：{{ item.sender_name }}</text>
+      </view>
+      <view class="message-footer">
+        <text class="time">{{ item.sent_time }}</text>
+        <text class="read-status">{{ item.is_read==1 ? '已读' : '未读' }}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="article-list">
+    <block wx:for="{{articles}}" wx:key="id">
+      <view class="article-item">
+        <view class="article-info">
+          <text style="font-size: large;">{{item.title}}</text>
+          <text style="color: #888888;">{{item.organizer_department}}</text>
+          <text style="color: #888888;">{{item.published_time}}</text>
+        </view>
+        <view class="article-actions">
+          <t-button theme="primary" size="small" bindtap="editArticle" data-id="{{item.article_id}}">编辑</t-button>
+          <t-button theme="danger" size="small" bindtap="deleteArticle" data-id="{{item.article_id}}" data-name="{{item.title}}">删除</t-button>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="publish-btn-container">
+    <t-button theme="primary" block size="large" bindtap="navigateToPublishPage">发布文章</t-button>
+  </view>
+</view>

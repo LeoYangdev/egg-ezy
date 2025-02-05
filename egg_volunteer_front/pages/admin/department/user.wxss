@@ -1,0 +1,53 @@
+.container {
+  padding: 20rpx;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.user-card {
+  width: calc(100% - 40rpx);
+  margin: 0 20rpx 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.user-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-extra-info {
+  padding: 0 20rpx 20rpx;
+}
+
+.user-department {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.other-info {
+  margin-top: 10rpx;
+}
+
+.info-item {
+  font-size: 28rpx;
+  color: #999;
+}
+

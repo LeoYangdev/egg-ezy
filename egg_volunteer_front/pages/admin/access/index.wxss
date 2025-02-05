@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.description {
+  color: #888888; /* 浅灰色 */
+  font-size: 28rpx;
+  margin-bottom: 16rpx;
+}
+
+.department-list {
+  width: 100%;
+}
+
+.department {
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee; /* 底部边框 */
+}

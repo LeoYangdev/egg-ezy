@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="icon">
+    <image src="./../../../image/success.png" mode="aspectFit" wx:if="{{info.msg==true}}"></image>
+    <image src="./../../../image/fail.png" mode="aspectFit" wx:if="{{info.msg!=true}}"></image>
+  </view>
+  <view class="title">{{info.type==1?'签到':'签退'}}{{info.msg==true?'成功':'失败'}}</view>
+  <view class="info">
+    <text class="time">签到时间：{{info.sign.check_in_time}}</text>
+    <text class="time" wx:if="{{info.type==2}}">签退时间：{{info.sign.check_out_time}}</text>
+    <text class="activity">活动名称：{{info.activity_name}}</text>
+    <text class="activity">消息：{{info.msg}}</text>
+  </view>
+</view>

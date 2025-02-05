@@ -1,0 +1,33 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="content">
+    <view class="input-example__label"> 类型 </view>
+    <t-radio-group default-value="0" borderless t-class="box" bind:change="onTypeChange">
+      <t-radio block="{{false}}" label="反馈" icon="dot" value="0" />
+      <t-radio block="{{false}}" label="建议" icon="dot" value="1" />
+    </t-radio-group>
+    <view class="input-example">
+      <view class="input-example__label"> 标题 </view>
+      <t-input placeholder="请输入文字" borderless="{{true}}" style='border: 2rpx solid var(--td-input-border-color-example);border-radius: 12rpx;' bind:change="onInputTitle"/>
+    </view>
+    <view class="custom-textarea">
+      <text class="input-example__label">内容</text>
+      <t-textarea t-class="external-class" placeholder="请输入文字" bordered maxlength="100" disableDefaultPadding="{{true}}" indicator style="height: 248rpx;" bind:change="onInput"/>
+    </view>
+
+    <t-button theme="primary" size="large" block bindtap="submitFeedback">提交</t-button>
+  </view>
+  <view style="background-color: #e6e6e6;  padding: 10px;width: 100%;text-align: center;margin-top: 20rpx;">
+    <text>历史反馈列表</text>
+  </view>
+  <view wx:for="{{feedbacks}}" wx:key="*this" class="bottom-card" bind:tap="navigateToDetail" data-id="{{item.feedback_id}}">
+    <view class="feedback-details">
+      <text class="title">{{item.feedback_title}}</text>
+      <text class='status {{item.status==1?"status-ok":""}}'>{{item.status==0?"未处理":"已处理"}}</text>
+    </view>
+    <view class="feedback-details">
+      <text class="content feedback_content">{{item.feedback_content}}</text>
+      <text class="time">{{item.feedback_time}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<t-toast id="t-toast" />
+<view class="containers">
+  <t-input label="部门名称" placeholder="请输入部门名称" value="{{ departmentname }}" bind:change="onInputChange" data-key="departmentname" />
+  <t-button theme="primary" size="large" bind:tap="addDepartment" block>新增部门</t-button>
+</view>

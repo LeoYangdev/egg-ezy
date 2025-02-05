@@ -1,0 +1,74 @@
+.container {
+  padding: 20rpx;
+}
+
+.notification-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.notification-card {
+  width: 100%;
+  margin: 0 0 20rpx 0rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.notification-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.notification-title {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.notification-preview {
+  font-size: 28rpx;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.notification-actions {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.notification-actions t-button {
+  margin-right: 10rpx;
+}
+
+.notification-details {
+  padding: 0 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+t-search {
+  margin-bottom: 20rpx;
+  width: calc(100% - 40rpx);
+}
+
+.publish-button {
+  position: fixed;
+  bottom: 20rpx;
+  width: calc(100% - 40rpx);
+  padding: 0 20rpx;
+}

@@ -1,0 +1,23 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="feedback-list">
+    <block wx:for="{{feedbacks}}" wx:key="id">
+      <view class="feedback-item">
+        <view class="feedback-title-time">
+          <text class="feedback-title">{{item.feedback_title}}</text>
+          <text class="feedback-time">{{item.feedback_time}}</text>
+        </view>
+        <view class="feedback-header">
+          <view class="feedback-info">
+            <text class="feedback-type {{item.feedback_type==0?'feedback':'suggestion'}}">{{item.feedback_type==0?'反馈':'建议'}}</text>
+            <text class="feedback-status {{item.status==0?'pending':'completed'}}">{{item.status==0?'待处理':'已完成'}}</text>
+          </view>
+        </view>
+        <view class="feedback-content">{{item.feedback_content}}</view>
+        <view class="feedback-actions">
+          <t-button theme="primary" bindtap="editFeedback" data-id="{{item.feedback_id}}">处理</t-button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

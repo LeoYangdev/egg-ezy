@@ -1,0 +1,60 @@
+/* pages/notification/list.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.card {
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+  flex: 1; /* 让标题占据剩余空间 */
+  overflow: hidden; /* 隐藏溢出部分 */
+  display: -webkit-box; /* 使用弹性盒子布局 */
+  -webkit-box-orient: vertical; /* 垂直方向排列 */
+  -webkit-line-clamp: 2; /* 设置最大行数 */
+  word-wrap: break-word; /* 允许在单词内换行 */
+}
+
+.category {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.card-content {
+  margin-top: 10rpx;
+  overflow: hidden; /* 隐藏溢出部分 */
+  display: -webkit-box; /* 使用弹性盒子布局 */
+  -webkit-box-orient: vertical; /* 垂直方向排列 */
+  -webkit-line-clamp: 2; /* 设置最大行数 */
+  word-wrap: break-word; /* 允许在单词内换行 */
+}
+
+.content {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.author {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.card-footer {
+  margin-top: 10rpx;
+}
+
+.published-time {
+  font-size: 28rpx;
+  color: #666;
+}

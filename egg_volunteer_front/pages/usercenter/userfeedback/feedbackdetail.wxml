@@ -1,0 +1,31 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <!-- 用户反馈详情 -->
+  <view class="feedback-detail">
+    <view class="feedback-title">{{feedback.feedback_title}}</view>
+    <view class="feedback-info">
+      <text class="feedback-type {{feedback.feedback_type==0?'feedback':'suggestion'}}">{{feedback.type==0?"反馈":"建议"}}</text>
+      <text class="feedback-status {{feedback.status==0?'pending':'completed'}}">{{feedback.status==0?"未处理":"已处理"}}</text>
+      <text class="feedback-time">{{feedback.feedback_time}}</text>
+    </view>
+    <view class="feedback-content">{{feedback.feedback_content}}</view>
+    <block wx:if="{{feedback.handle_time}}">
+      <view class="feedback-reply">
+        <text class="reply-label">处理时间：</text>
+        <text class="reply-content">{{feedback.handle_time}}</text>
+      </view>
+      <view class="feedback-reply">
+        <text class="reply-label">处理人：</text>
+        <text class="reply-content">{{feedback.handler}}</text>
+      </view>
+      <view class="feedback-reply">
+        <text class="reply-label">处理部门：</text>
+        <text class="reply-content">{{feedback.handler_department}}</text>
+      </view>
+    </block>
+    <view class="feedback-reply">
+      <text class="reply-label">处理结果：</text>
+      <text class="reply-content">{{feedback.remarks || '暂未处理'}}</text>
+    </view>
+  </view>
+</view>

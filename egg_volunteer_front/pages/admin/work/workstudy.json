@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "component": true,
+  "navigationBarTitleText": "勤工俭学管理",
+  "usingComponents": {
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-loading": "tdesign-miniprogram/loading/loading",
+    "t-sticky": "tdesign-miniprogram/sticky/sticky"
+  }
+}

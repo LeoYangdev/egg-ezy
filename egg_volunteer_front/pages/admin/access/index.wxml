@@ -1,0 +1,11 @@
+<t-toast id="t-toast" />
+<view class="container">
+  <view class="description">请选择要管理的部门</view>
+  <view class="department-list">
+    <block wx:for="{{departments}}" wx:key="id">
+      <view class="department" bindtap="goToDepartmentDetail" data-id="{{item.department_id}}" data-name="{{item.department_name}}">
+        {{item.department_name}}
+      </view>
+    </block>
+  </view>
+</view>

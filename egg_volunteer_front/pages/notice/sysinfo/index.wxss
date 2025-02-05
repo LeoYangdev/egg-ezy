@@ -1,0 +1,56 @@
+/* pages/user/messages/list.wxss */
+.container {
+  padding: 20rpx;
+}
+
+.message-card {
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.message-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.activity-name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.status {
+  font-size: 28rpx;
+}
+
+.status-pending {
+  color: #FFA500; /* 橙色 */
+}
+
+.status-approved {
+  color: #00FF00; /* 绿色 */
+}
+
+.status-rejected {
+  color: #FF0000; /* 红色 */
+}
+
+.message-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #666;
+  min-width: 300rpx;
+  text-align: right;
+}
+
+.remarks {
+  font-size: 28rpx;
+  color: #666;
+}

@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="title">系统信息</view>
+  <view class="info">
+    <view class="info-item">
+      <text>系统版本号：{{sysversion}}</text>
+    </view>
+    <view class="info-item">
+      <text>设备型号：{{deviceModel}}</text>
+    </view>
+    <view class="info-item">
+      <text>操作系统版本：{{osVersion}}</text>
+    </view>
+    <view class="info-item">
+      <text>微信版本号：{{appVersion}}</text>
+    </view>
+  </view>
+</view>
