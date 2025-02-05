@@ -1,9 +1,6 @@
 ![PHP](https://img.shields.io/badge/ThinkPHP-6.0-blue.svg)
-
 ![PHP](https://img.shields.io/badge/微信小程序-3.3.5-orange.svg)
-
 ![Mysql](https://img.shields.io/badge/Mysql-5.7-blue.svg)
-
 ![七牛云](https://img.shields.io/badge/七牛云存储-1.0-blue.svg)
 
 ::: tip 介绍
