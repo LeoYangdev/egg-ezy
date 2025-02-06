@@ -41,7 +41,7 @@ class Login
      */
     public function wechatVerify(string $code)
     {
-        $request_url = "https://api.weixin.qq.com/sns/jscode2session?appid=wxd9f87654c1b7c89e&secret=ad7c7670830191ee3d751381d77374fe&js_code=" . $code . "&grant_type=authorization_code";
+        $request_url = "https://api.weixin.qq.com/sns/jscode2session?appid=xx&secret=xxx&js_code=" . $code . "&grant_type=authorization_code";
         try {
             $client = new  Client ();
             $res = $client->request('GET', $request_url, [
